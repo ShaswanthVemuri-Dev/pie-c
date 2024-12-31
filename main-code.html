@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -17,12 +17,12 @@
         }
 
         .chart-container {
-            width: 40%;
-            max-width: 500px;
+            width: 30%;
+            max-width: 400px;
             background: #ffffff;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
-            padding: 20px;
+            padding: 15px;
         }
 
         canvas {
@@ -43,14 +43,14 @@
 
             const data = {
                 labels: [
-                    'Educated Workers (103,181 - 39.8%)',
-                    'Uneducated Workers (27,206 - 10.5%)',
-                    'Non-Workers (128,713 - 49.7%)',
-                    'Government Jobs (15,477 - 6.0%)',
-                    'Private Sector & Others (87,704 - 33.8%)',
-                    'Agricultural Labor (19,044 - 7.4%)',
-                    'Other Unskilled Work (8,162 - 3.1%)',
-                    'MSME Workers (26,077 - 10.1%)'
+                    'Educated Workers',
+                    'Uneducated Workers',
+                    'Non-Workers',
+                    'Government Jobs',
+                    'Private Sector & Others',
+                    'Agricultural Labor',
+                    'Other Unskilled Work',
+                    'MSME Workers'
                 ],
                 datasets: [{
                     label: 'Employment Distribution',
@@ -92,7 +92,8 @@
                             callbacks: {
                                 label: function(context) {
                                     const value = context.raw;
-                                    return `${context.label}: ${value}%`;
+                                    const label = context.label;
+                                    return `${label}: ${value}%`;
                                 }
                             }
                         }
